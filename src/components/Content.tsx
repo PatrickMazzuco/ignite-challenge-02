@@ -5,6 +5,7 @@ import { MovieCard } from './MovieCard';
 import { GenreResponseProps } from '../App';
 
 import '../styles/content.scss';
+import { Header } from './Header';
 
 interface MovieProps {
   imdbID: string;
@@ -35,11 +36,7 @@ export function Content({ selectedGenre, selectedGenreId }: ContentProps) {
 
   return (
     <div className="container">
-      <header>
-        <span className="category">
-          Categoria:<span> {selectedGenre.title}</span>
-        </span>
-      </header>
+      <Header genreTitle={selectedGenre.title} />
 
       <main>
         <div className="movies-list">
